@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Documentación interactiva de infraestructura de red FinalSoft">
+  <title>FinalSoft | Infraestructura de Red</title>
+  <link rel="icon" href="assets/icons/finalsoft.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="app" class="app">
+
+  <header class="topbar">
+    <div class="top-left">
+      <span class="brand-header">FINALSOFT <span class="hline">———</span>·<span class="hline">———</span> RED</span>
+      <span class="slash">/</span>
+      <span class="crumb-active" id="crumb">Inicio</span>
+    </div>
+    <div class="top-right">
+      <div class="search-wrap">
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput"
+                 placeholder="Buscar equipo, archivo o IP…"
+                 aria-label="Buscar"
+                 autocomplete="off"
+                 role="combobox"
+                 aria-expanded="false"
+                 aria-controls="search-results"
+                 aria-haspopup="listbox">
+        </label>
+        <div id="search-results" class="search-results hidden"
+             role="listbox" aria-label="Resultados de búsqueda"></div>
+      </div>
+      <span class="top-tag">GNS3 · 2 sedes</span>
+    </div>
+  </header>
+
+  <main class="content" id="content" tabindex="-1"></main>
+
+  <footer class="footer">
+    FinalSoft · Infraestructura de Red · Ingeniería de Sistemas
+    <span>Portal de documentación · no monitorización en tiempo real</span>
+  </footer>
+
+  <nav class="pill-nav" id="pill-nav" aria-label="Navegación principal">
+    <a href="#inicio" class="pill-brand" data-route="inicio" aria-label="FinalSoft — Inicio">F<em>●</em></a>
+    <div id="nav" class="pill-items"></div>
+  </nav>
+
+</div>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button id="modalClose" aria-label="Cerrar">×</button>
+  <img id="modalImg" alt="">
+  <p id="modalLabel"></p>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data/infraestructura.js"></script>
+<script src="data/routers.js"></script>
+<script src="data/dhcp.js"></script>
+<script src="data/dns.js"></script>
+<script src="data/web.js"></script>
+<script src="data/correo.js"></script>
+<script src="data/backup.js"></script>
+<script src="data/gateway.js"></script>
+<script src="data/pruebas.js"></script>
+<script src="js/code-viewer.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/topology.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

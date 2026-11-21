@@ -1,0 +1,53 @@
+/* ── 1150px: compact padding ───────────────────────────── */
+@media (max-width: 1150px) {
+  .content { padding: 35px 28px 120px; }
+  .hero    { margin: -35px -28px 35px; padding: 60px 28px 70px; }
+  .hero-content { grid-template-columns: 110px 1fr 110px; }
+  .grid3   { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 860px: drop side columns ──────────────────────────── */
+@media (max-width: 860px) {
+  .topbar  { padding: 0 20px; }
+  .content { padding: 28px 20px 110px; }
+  .hero    { margin: -28px -20px 28px; padding: 50px 20px 60px; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-col-side { display: none; }
+  .hero-col-center h1 { font-size: clamp(44px, 10vw, 70px); }
+  .topo-composite { width: 80%; }
+  .grid2   { grid-template-columns: 1fr; }
+  .grid3   { grid-template-columns: 1fr 1fr; }
+  .stats   { grid-template-columns: repeat(2, 1fr); }
+  .search input { width: 150px; }
+}
+
+/* ── 600px: mobile ─────────────────────────────────────── */
+@media (max-width: 600px) {
+  .brand-header { display: none; }
+  .content { padding: 22px 16px 100px; }
+  .hero    { margin: -22px -16px 22px; padding: 40px 16px 50px; min-height: 60vh; }
+  .hero-col-center h1 { font-size: clamp(38px, 11vw, 56px); letter-spacing: -2px; }
+  .topo-composite { width: 95%; }
+  .grid3   { grid-template-columns: 1fr; }
+  .stats   { gap: 8px; }
+  .stat    { padding: 16px; }
+  .stat strong { font-size: 24px; }
+  .evidence-grid { grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  .panel   { padding: 17px; }
+  .tabs .tab { padding: 12px; }
+  /* Pill nav: brand fijo, items con scroll horizontal */
+  .pill-nav { max-width: calc(100vw - 20px); }
+  .pill-items { overflow-x: auto; scrollbar-width: none; }
+  .pill-items::-webkit-scrollbar { display: none; }
+  /* Hide low-priority topbar elements */
+  .top-tag { display: none; }
+  .search  { display: none; }
+  .footer span { display: none; }
+}
+
+/* ── 400px: very small ─────────────────────────────────── */
+@media (max-width: 400px) {
+  .hero-col-center h1 { font-size: 34px; letter-spacing: -1.5px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
